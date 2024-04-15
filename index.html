@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Air Pollution Indicator</title>
+		<link rel="stylesheet" href="./style.css" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@700&family=Montserrat:wght@700&family=Poppins&display=swap"
+			rel="stylesheet"
+		/>
+		<style>
+			table {
+				width: 100%;
+				border-collapse: collapse;
+				border: 2px solid #ddd;
+			}
+		
+			th, td {
+				border: 1px solid #ddd;
+				padding: 10px;
+				text-align: left;
+			}
+		
+			th {
+				background-color: #f2f2f2;
+			}
+		</style>
+	</head>
+	<body >
+		<div class="root">
+			<h1 class="heading">Air Pollution Indicator</h1>
+			<div class="location-container">
+				<h2 class="sub-heading">Your Location :</h2>
+				<label for="error-msg" style="color: red"></label><br />
+				<input
+					type="text"
+					name="city"
+					placeholder="City"
+					id="city"
+					class="loc-input"
+				/>
+
+				<input
+					type="text"
+					name="state"
+					placeholder="State"
+					id="state"
+					class="loc-input"
+				/>
+				<button class="search-btn">Search</button>
+			</div>
+			<div class="air-info">
+				<h2 class="sub-heading">Air Quality Index :</h2>
+				<span class="air-quality">...</span>
+				<span class="arr">&nbsp;&rarr;&nbsp;</span>
+				<span class="air-quality-status">...</span>
+				<div class="component-container">
+					<h2 class="sub-heading">
+						Concentration of pollutants in air :
+					</h2>
+					<table id="airComponentTable" style="display:none;">
+						<thead>
+							<tr style="color: black;">
+								<th>Component</th>
+								<th>Duration</th>
+								<th>Concentration</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Carbon monoxide</td>
+								<td>8 hours</td>
+								<td>9 ppm</td>
+							</tr>
+							<tr>
+								<td>Nitrogen dioxide</td>
+								<td>1 hour</td>
+								<td>0.12 ppm</td>
+							</tr>
+							<tr>
+								<td>Nitrogen dioxide</td>
+								<td>1 year</td>
+								<td>0.03 ppm</td>
+							</tr>
+							<tr>
+								<td>Ozone</td>
+								<td>1 hour</td>
+								<td>0.10 ppm</td>
+							</tr>
+							<tr>
+								<td>Ozone</td>
+								<td>4 hours</td>
+								<td>0.08 ppm</td>
+							</tr>
+							<tr>
+								<td>Sulfur dioxide</td>
+								<td>1 hour</td>
+								<td>0.20 ppm</td>
+							</tr>
+							<tr>
+								<td>Sulfur dioxide</td>
+								<td>1 day</td>
+								<td>0.08 ppm</td>
+							</tr>
+							<tr>
+								<td>Sulfur dioxide</td>
+								<td>1 year</td>
+								<td>0.02 ppm</td>
+							</tr>
+							<tr>
+								<td>Lead</td>
+								<td>1 year</td>
+								<td>0.50 μg/m<sup>3</sup></td>
+							</tr>
+							<tr>
+								<td>PM 10</td>
+								<td>1 day</td>
+								<td>50 μg/m<sup>3</sup></td>
+							</tr>
+							<tr>
+								<td>PM 10</td>
+								<td>1 year</td>
+								<td>25 μg/m<sup>3</sup></td>
+							</tr>
+							<tr>
+								<td>PM 2.5</td>
+								<td>1 day</td>
+								<td>25 μg/m<sup>3</sup></td>
+							</tr>
+							<tr>
+								<td>PM 2.5</td>
+								<td>1 year</td>
+								<td>8 μg/m<sup>3</sup></td>
+							</tr>
+						</tbody>
+					</table>
+					
+
+					<!-- Pollutant information will be dynamically populated here -->
+				</div>
+			</div>
+			<footer></footer>
+		</div>
+		<script src="./script.js" defer></script>
+	</body>
+</html>
